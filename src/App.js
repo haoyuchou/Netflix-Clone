@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import "./App.css";
+import requests from "./request";
+import AllList from "./pages/AllList";
+import Header from "./Component/Header/Header";
+import Nav from "./Component/UI/Nav";
+import TVList from "./pages/TVList";
+import MovieList from "./pages/MovieList";
+//import MoviesList from "./Component/Fetch Movie and TV/MoviesList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Switch>
+        <Route path="/" exact>
+          <Header header={requests.fetchTrending} />
+          <AllList />
+        </Route>
+        <Route path="/movie">
+          <Nav />
+          <MovieList />
+        </Route>
+        <Route path="/tv">
+          <Nav />
+          <TVList />
+        </Route>
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
+    </Fragment>
   );
 }
 

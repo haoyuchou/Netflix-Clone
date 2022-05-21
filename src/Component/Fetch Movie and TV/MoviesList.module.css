@@ -1,0 +1,47 @@
+.trendMovie-container {
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-box {
+  padding: 5px;
+}
+
+/*Make the movie scrollable, to can hide the sroll bar*/
+.movieList-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.movieList-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.movie-title {
+  margin: 1.5rem 0 1.5rem 0;
+  color: aliceblue;
+}
+
+/*make the movie card animation*/
+.movieList-container:hover .movie-box {
+  transform: translateX(-10%);
+}
+
+.movie-box:hover ~ .movie-box {
+  transform: translateX(10%);
+}
+
+.movieList-container .movie-box:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/*No trailer video*/
+.noTrailer{
+  text-align: center;
+}
+

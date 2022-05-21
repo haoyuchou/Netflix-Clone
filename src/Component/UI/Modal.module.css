@@ -1,0 +1,31 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.content {
+  max-height: 50rem;
+  /*overflow: initial;*/
+  padding: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 15vh;
+  left: 12.5%;
+  width: 75%;
+  height: 80%;
+  background-color: black;
+  padding: 0;
+  /*border-radius: 14px;*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  overflow-x: hidden;
+  overflow-y: initial;
+
+  /*animation: slide-down 300ms ease-out forwards;*/
+}

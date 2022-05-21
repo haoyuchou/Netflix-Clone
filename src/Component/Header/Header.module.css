@@ -1,0 +1,21 @@
+.movie-info-container {
+  max-width: 400px;
+  padding-top: 125px;
+  padding-left: 25px;
+  text-align: left;
+  color: aliceblue;
+}
+
+.movie-title {
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.movie-button {
+  margin-bottom: 20px;
+}
+
+.movie-overview {
+  font-size: 0.8rem;
+}

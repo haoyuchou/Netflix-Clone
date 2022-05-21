@@ -1,0 +1,10 @@
+.trailer-modal {
+  color: aliceblue;
+}
+
+
+.trailer-img {
+  max-width: 100%;
+  background: linear-gradient(#e66465, #9198e5);
+  z-index: 31;
+}
