@@ -14,6 +14,7 @@
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
+  transition: all 1.5s linear;
 }
 
 .movieList-container::-webkit-scrollbar {
@@ -26,7 +27,7 @@
   color: aliceblue;
 }
 
-/*make the movie card animation*/
+/*make the movie card animation  add transition*/
 .movieList-container:hover .movie-box {
   transform: translateX(-10%);
 }
@@ -41,7 +42,7 @@
 }
 
 /*No trailer video*/
-.noTrailer{
+/*.noTrailer{
   text-align: center;
-}
+}*/
 

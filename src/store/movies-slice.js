@@ -17,6 +17,7 @@ const moviesSlice = createSlice({
             else{
                 state.movies.push(action.payload);
             }
+            console.log(state.movies);
             // the action have the movie data, and the genre title
             //action.payload.title  action.payload.movieData
 

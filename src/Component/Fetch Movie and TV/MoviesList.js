@@ -6,7 +6,7 @@ import { moviesAction } from "../../store/movies-slice";
 import Movie from "./Movie";
 import Modal from "../UI/Modal";
 import TrailerModal from "../Trailer Modal/TrailerModal";
-import ReactPlayer from "react-player";
+//import ReactPlayer from "react-player";
 //import requests from "../request";
 const axios = require("axios");
 
@@ -19,7 +19,7 @@ const MoviesList = (props) => {
   const { fetchRequest, title, movieOrtv } = props;
 
   // For Trailer Modal
-  const trailreURL = useSelector((state) => state.trailer.youtubeAddress); //youtube address
+  //const trailreURL = useSelector((state) => state.trailer.youtubeAddress); //youtube address
   const movieGenre = useSelector((state) => state.trailer.movieGenre);
   const trailerBackrop = useSelector((state) => state.trailer.backdrop_path);
   const trailerOriginalName = useSelector(
@@ -117,19 +117,7 @@ const MoviesList = (props) => {
                   overview={trailerOverview}
                   vote_average={trailerVoteAverage}
                 />
-                {trailreURL && (
-                  <ReactPlayer
-                    width="100%"
-                    url={trailreURL}
-                    controls={true}
-                    playing={false}
-                  />
-                )}
-                {!trailreURL && (
-                  <p className={classes.noTrailer}>
-                    Sorry, We don't have this video
-                  </p>
-                )}
+                
               </Modal>
             )}
           </div>

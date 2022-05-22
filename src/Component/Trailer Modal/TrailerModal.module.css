@@ -5,6 +5,20 @@
 
 .trailer-img {
   max-width: 100%;
-  background: linear-gradient(#e66465, #9198e5);
   z-index: 31;
 }
+
+.trailer-info{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.trailer-info-name{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.noTrailer{
+    text-align: center;
+    color: aliceblue;
+  }
