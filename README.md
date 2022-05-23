@@ -1,6 +1,6 @@
 # Website URL
 
-Open [https://netflix-clone-50813.web.app/tv]
+Open [https://netflix-clone-50813.web.app/tv](https://netflix-clone-50813.web.app/tv)
 
 # Getting Started with Create React App
 
