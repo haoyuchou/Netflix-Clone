@@ -14,8 +14,13 @@
 
 .movie-button {
   margin-bottom: 20px;
+  display: flex;
 }
 
 .movie-overview {
   font-size: 0.8rem;
+}
+
+.button{
+  margin-right: 1rem;
 }

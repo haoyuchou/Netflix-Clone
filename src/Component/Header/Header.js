@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
 import classes from "./Header.module.css";
+
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
 import Button from "@mui/material/Button";
 import Nav from "../UI/Nav";
 import requests from "../../request";
@@ -11,6 +14,14 @@ const Header = () => {
   const [movieBackDrop, setMovieBackDrop] = useState({});
   // Make a request for a user with a given ID
   // I can refactor to save all the fetchRequest into redux ?
+  const theme = createTheme({
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: grey[900],
+      },
+    },
+  });
 
   useEffect(() => {
     if (initail) {
@@ -57,12 +68,18 @@ const Header = () => {
           <p>{movieBackDrop.title}</p>
         </div>
         <div className={classes["movie-button"]}>
-          <Button variant="outlined" size="large">
-            Play
-          </Button>
-          <Button variant="outlined" size="large">
-            My List
-          </Button>
+          <ThemeProvider theme={theme}>
+            <div className={classes.button}>
+              <Button variant="contained" size="large">
+                Play
+              </Button>
+            </div>
+            <div>
+              <Button variant="contained" size="large">
+                My List
+              </Button>
+            </div>
+          </ThemeProvider>
         </div>
         <div className={classes["movie-overview"]}>
           <p>{movieBackDrop.overview}</p>

@@ -37,8 +37,6 @@ const Movie = (props) => {
         if (youtubeKey) {
           youtube = "https://www.youtube.com/watch?v=" + youtubeKey; //+
           //"&origin=https://netflix-clone-fe904.web.app/";
-          //my local host is http not https, that's the problem
-          //Use props.onClick to pass youtube url?
           props.onClick(
             youtube,
             id,
