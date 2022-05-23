@@ -4,7 +4,14 @@ import { APIkey } from "../../request";
 const axios = require("axios");
 
 const Movie = (props) => {
-  const { id, movieOrtv, backdrop_path, original_name, overview, vote_average } = props;
+  const {
+    id,
+    movieOrtv,
+    backdrop_path,
+    original_name,
+    overview,
+    vote_average,
+  } = props;
 
   //const dispatch = useDispatch();
 
@@ -28,19 +35,21 @@ const Movie = (props) => {
         // always executed
         //if the youtube key is invalid?
         if (youtubeKey) {
-          youtube =
-            "https://www.youtube.com/watch?v=" +
-            youtubeKey +
-            "&origin=http://localhost:3000";
+          youtube = "https://www.youtube.com/watch?v=" + youtubeKey; //+
+          //"&origin=https://netflix-clone-fe904.web.app/";
           //my local host is http not https, that's the problem
           //Use props.onClick to pass youtube url?
-          props.onClick(youtube, id, backdrop_path, original_name, overview, vote_average);
+          props.onClick(
+            youtube,
+            id,
+            backdrop_path,
+            original_name,
+            overview,
+            vote_average
+          );
         } else {
           props.onClick(false, id);
         }
-
-        //dispatch(trailerActions.setYoutubeAddress(youtube));
-        //dispatch(trailerActions.movieIsClicked());
       });
   };
   return (

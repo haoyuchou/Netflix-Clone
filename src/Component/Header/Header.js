@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 import classes from "./Header.module.css";
 import Button from "@mui/material/Button";
 import Nav from "../UI/Nav";
-//import requests from "../../request";
+import requests from "../../request";
 const axios = require("axios");
 
 let initail = true;
-const Header = (props) => {
+const Header = () => {
   const [movieBackDrop, setMovieBackDrop] = useState({});
-  const { header } = props;
   // Make a request for a user with a given ID
   // I can refactor to save all the fetchRequest into redux ?
 
@@ -20,7 +19,7 @@ const Header = (props) => {
     }
     const loadMovieBackdrop = async () => {
       try {
-        const response = await axios.get(header);
+        const response = await axios.get(requests.fetchTrending);
         const randomNum = Math.floor(Math.random() * 20);
         const movie = await response.data.results[randomNum];
         console.log(response.data.results[randomNum]);
@@ -39,7 +38,7 @@ const Header = (props) => {
       }
     };
     loadMovieBackdrop();
-  }, [header]);
+  }, []);
 
   //console.log(movieBackDrop.url);
 
