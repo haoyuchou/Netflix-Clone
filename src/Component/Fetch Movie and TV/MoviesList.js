@@ -10,7 +10,7 @@ import TrailerModal from "../Trailer Modal/TrailerModal";
 //import requests from "../request";
 const axios = require("axios");
 
-let initial = true;
+//let initial = true;
 
 const MoviesList = (props) => {
   const [results, setResults] = useState([]);
@@ -21,27 +21,24 @@ const MoviesList = (props) => {
   // For Trailer Modal
   //const trailreURL = useSelector((state) => state.trailer.youtubeAddress); //youtube address
   const movieGenre = useSelector((state) => state.trailer.movieGenre);
-  const trailerBackrop = useSelector((state) => state.trailer.backdrop_path);
-  const trailerOriginalName = useSelector(
-    (state) => state.trailer.original_name
-  );
-  const trailerOverview = useSelector((state) => state.trailer.overview);
-  const trailerVoteAverage = useSelector((state) => state.trailer.vote_average);
 
   const dispatch = useDispatch();
 
   // fetch the list of movie or tv
   useEffect(() => {
-    if (initial) {
+    /*if (initial) {
       initial = false;
       return;
-    }
+    }*/
 
     const fetchMovieHandler = async () => {
       try {
         const response = await axios.get(fetchRequest);
         console.log(response);
         const data = await response.data.results;
+        /*if(title === "Trending"){
+          console.log("IT is trending, save it to redux")
+        }*/
         setResults(data);
         //save movie data to reducers
         dispatch(moviesAction.addMovies({ title: title, movieData: data })); //in case for search feature
@@ -80,6 +77,11 @@ const MoviesList = (props) => {
     setMovieIsClicked(false);
   };
 
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body.style.overflow = movieIsClicked ? "hidden" : "auto";
+  }, [movieIsClicked]);
+
   return (
     <Fragment>
       {error && <p>Something went wrong when fetching {title}</p>}
@@ -111,13 +113,7 @@ const MoviesList = (props) => {
           <div className={classes.trailer}>
             {movieIsClicked && movieGenre === title && (
               <Modal onClose={modalCloseHandler}>
-                <TrailerModal
-                  backdrop_path={trailerBackrop}
-                  name={trailerOriginalName}
-                  overview={trailerOverview}
-                  vote_average={trailerVoteAverage}
-                />
-                
+                <TrailerModal />
               </Modal>
             )}
           </div>

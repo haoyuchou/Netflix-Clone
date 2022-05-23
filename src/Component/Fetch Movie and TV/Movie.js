@@ -20,7 +20,7 @@ const Movie = (props) => {
   const clickMovieHandler = () => {
     axios
       .get(
-        `http://api.themoviedb.org/3/${movieOrtv}/${id}/videos?api_key=${APIkey}`
+        `https://api.themoviedb.org/3/${movieOrtv}/${id}/videos?api_key=${APIkey}`
         //what if the return doesn't have a youtube video
       )
       .then(function (response) {

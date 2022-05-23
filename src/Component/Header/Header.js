@@ -9,7 +9,7 @@ import Nav from "../UI/Nav";
 import requests from "../../request";
 const axios = require("axios");
 
-let initail = true;
+//let initail = true;
 const Header = () => {
   const [movieBackDrop, setMovieBackDrop] = useState({});
   // Make a request for a user with a given ID
@@ -17,17 +17,16 @@ const Header = () => {
   const theme = createTheme({
     palette: {
       primary: {
-        // Purple and green play nicely together.
         main: grey[900],
       },
     },
   });
 
   useEffect(() => {
-    if (initail) {
+    /*if (initail) {
       initail = false;
       return;
-    }
+    }*/
     const loadMovieBackdrop = async () => {
       try {
         const response = await axios.get(requests.fetchTrending);

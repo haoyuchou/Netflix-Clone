@@ -1,48 +1,18 @@
-/*.bm-burger-button {
-  position: "fixed";
-  width: "20px";
-  height: "1.7rem";
-  left: "15px";
-  top: "15px";
-}
-.bm-burger-bars {
-  background: "#373a47";
-}
-.bm-burger-bars:hover{
-  background: "#a90000";
-}
-.bm-cross-button {
-  height: "24px";
-  width: "24px";
-}
-.bm-cross {
-  background: "#bdc3c7";
-}
-.bm-men-wrap {
-  position: "fixed";
-  height: "100%";
-}
-.bm-menu {
-  background: "black";
-  padding: "2.5em 1.5em 0";
-  font-size: "1.15em";
-  overflowY: "hidden",
-}/*
-.bm-morph-shape {
-  fill: "#373a47";
-}
-.bm-item-list {
-  color: "#b8b7ad";
-  padding: "0";
-}
-.bm-item {
-  display: "inline-block";
-}
-.bm-overlay {
-  background: "rgba(0, 0, 0, 0.7)";
-}*/
-
-.link{
+.link {
   color: aliceblue;
   font-weight: bold;
+  text-decoration: none;
 }
+
+/*@media(min-width: 402px){
+  .menu {
+      width: 15%;
+  }
+}
+
+@media(max-width: 400px){
+  .menu {
+      width: 30%;
+  }
+}*/
+

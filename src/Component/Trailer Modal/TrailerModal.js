@@ -5,8 +5,14 @@ import { useSelector } from "react-redux";
 import ReactPlayer from "react-player";
 
 const TrailerModal = (props) => {
-  const { backdrop_path, name, overview, vote_average } = props;
-  const backdropPathURL = `https://image.tmdb.org/t/p/original${backdrop_path}`;
+  //const { backdrop_path, name, overview, vote_average } = props;
+  const trailerBackdrop = useSelector((state) => state.trailer.backdrop_path);
+  const trailerOriginalName = useSelector(
+    (state) => state.trailer.original_name
+  );
+  const trailerOverview = useSelector((state) => state.trailer.overview);
+  const trailerVoteAverage = useSelector((state) => state.trailer.vote_average);
+  const backdropPathURL = `https://image.tmdb.org/t/p/original${trailerBackdrop}`;
   const trailreURL = useSelector((state) => state.trailer.youtubeAddress); //youtube address
   // have to check if there is backrop path return by api
   return (
@@ -23,17 +29,19 @@ const TrailerModal = (props) => {
       ></div>
       <div className={classes["trailer-info"]}>
         <p className={classes["trailer-info-name"]}>
-          {name ? name : "Sorry, we don't have the name of this movie or tv"}
+          {trailerOriginalName
+            ? trailerOriginalName
+            : "Sorry, we don't have the name of this movie or tv"}
         </p>
         <p>
-          {overview
-            ? overview
+          {trailerOverview
+            ? trailerOverview
             : "Sorry, we don't have the overview of this movie or tv"}
         </p>
         <p>
           Vote Average:{" "}
-          {vote_average
-            ? vote_average
+          {trailerVoteAverage
+            ? trailerVoteAverage
             : "Sorry, we don't have the voting average of this movie or tv"}
         </p>
       </div>
