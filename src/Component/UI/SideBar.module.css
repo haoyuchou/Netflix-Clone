@@ -2,6 +2,29 @@
   color: aliceblue;
   font-weight: bold;
   text-decoration: none;
+  /*textAlign: "center",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",*/
+}
+
+.item-list {
+  color: #b8b7ad;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10%;
+}
+
+.menu {
+  background: black;
+  padding: 10% 10% 0;
+  font-size: 1.15em;
+}
+
+@media(max-width: 730px){
+  .menu {
+      font-size: 0.5em;
+  }
 }
 
 /*@media(min-width: 402px){
@@ -15,4 +38,3 @@
       width: 30%;
   }
 }*/
-

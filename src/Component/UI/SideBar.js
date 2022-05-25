@@ -16,42 +16,47 @@ const SideBar = () => {
     },
     bmBurgerBars: {
       background: "#373a47",
+      //padding: "0",
     },
     bmBurgerBarsHover: {
       background: "#a90000",
     },
-    bmCrossButton: {
+    bmCrossButton: { // this is the x button
       height: "24px",
-      width: "24px",
+      width: "10px",
     },
-    bmCross: {
+    bmCross: {  // the x button color
       background: "#bdc3c7",
     },
     bmMenuWrap: {
       position: "fixed",
       height: "100%",
     },
-    bmMenu: {
+    /*bmMenu: {
       background: "black",
-      padding: "10% 10% 0",
+      padding: " 10% 10% 0",
       fontSize: "1.15em",
-      //overflowY: "hidden",
-    },
+    },*/
     bmMorphShape: {
       fill: "#373a47",
     },
-    bmItemList: {
+    /*bmItemList: {
       color: "#b8b7ad",
-      padding: "0",
-    },
+      textAlign: "center",
+      paddingTop: "10px",
+      paddingBottom: "10px"
+      //padding: "0",
+      //margin: "0",
+    },*/
     bmItem: {
-      display: "inline-block",
+      //display: "inline-block",
+      padding: "0"
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.5)",
     },
   };
-  
+
   const stateChangeHandler = (state) => {
     setMenuIsOpen((prev) => {
       return state.isOpen;
@@ -71,6 +76,8 @@ const SideBar = () => {
       customBurgerIcon={<MenuIcon fontSize="large" />}
       isOpen={menuIsOpen}
       onStateChange={stateChangeHandler}
+      itemListClassName={classes["item-list"]}
+      menuClassName={classes.menu}
     >
       <ul>
         <Link to="/" className={classes.link} onClick={menuHandler}>
