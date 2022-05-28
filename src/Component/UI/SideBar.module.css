@@ -27,6 +27,12 @@
   }
 }
 
+@media(max-width: 730px){
+  .item-list {
+      padding-top: 40px;
+  }
+}
+
 /*@media(min-width: 402px){
   .menu {
       width: 15%;

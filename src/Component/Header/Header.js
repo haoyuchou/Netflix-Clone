@@ -57,6 +57,8 @@ const Header = () => {
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)) ,url(${movieBackDrop.url})`,
         backgroundSize: "cover",
+        backgroundPosition: "center center",
+        objectFit: "contain",
         height: "600px",
         zIndex: "-1",
       }}

@@ -18,15 +18,15 @@ const TrailerModal = (props) => {
   return (
     <div className={classes["trailer-modal"]}>
       <div
-        className={classes["trailer-img-container"]}
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)) ,url(${backdropPathURL})`,
           backgroundSize: "cover",
+          backgroundPosition: "center center",
+          objectFit: "contain",
           height: "400px",
-          maxWidth: "100%",
           zIndex: 40,
         }}
-      ></div>
+      />
       <div className={classes["trailer-info"]}>
         <p className={classes["trailer-info-name"]}>
           {trailerOriginalName
