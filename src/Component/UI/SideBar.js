@@ -21,36 +21,29 @@ const SideBar = () => {
     bmBurgerBarsHover: {
       background: "#a90000",
     },
-    bmCrossButton: { // this is the x button
+    bmCrossButton: {
+      // this is the x button
       height: "24px",
       width: "10px",
     },
-    bmCross: {  // the x button color
+    bmCross: {
+      // the x button color
       background: "#bdc3c7",
     },
     bmMenuWrap: {
       position: "fixed",
       height: "100%",
+      width: "20%"
+      //width: window.innerWidth > "730" ? "15%" : "25%"
     },
-    /*bmMenu: {
-      background: "black",
-      padding: " 10% 10% 0",
-      fontSize: "1.15em",
-    },*/
+    
     bmMorphShape: {
       fill: "#373a47",
     },
-    /*bmItemList: {
-      color: "#b8b7ad",
-      textAlign: "center",
-      paddingTop: "10px",
-      paddingBottom: "10px"
-      //padding: "0",
-      //margin: "0",
-    },*/
+
     bmItem: {
       //display: "inline-block",
-      padding: "0"
+      padding: "0",
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.5)",
@@ -71,7 +64,6 @@ const SideBar = () => {
   };
   return (
     <Menu
-      width={"15%"}
       styles={styles}
       customBurgerIcon={<MenuIcon fontSize="large" />}
       isOpen={menuIsOpen}

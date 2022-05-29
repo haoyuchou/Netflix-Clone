@@ -1,12 +1,10 @@
+
 .link {
   color: aliceblue;
   font-weight: bold;
   text-decoration: none;
-  /*textAlign: "center",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",*/
 }
+
 
 .item-list {
   color: #b8b7ad;

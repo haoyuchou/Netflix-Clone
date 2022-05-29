@@ -13,6 +13,7 @@ const requests = {
     fetchDramaMovie: `https://api.themoviedb.org/3/discover/movie?api_key=${APIkey}&language=en-US&with_genres=18`,
     fetchRomanceMovie: `https://api.themoviedb.org/3/discover/movie?api_key=${APIkey}&language=en-US&with_genres=10749`,
     
+    fetchNetflixOriginal: `https://api.themoviedb.org/3/discover/tv?api_key=${APIkey}&with_networks=213`,
     fetchTopRatedTV: `https://api.themoviedb.org/3/tv/top_rated?api_key=${APIkey}&language=en-US&page=1`,
     fetchPopularTV: `https://api.themoviedb.org/3/tv/popular?api_key=${APIkey}&language=en-US&page=1`,
     fetchActionTV: `https://api.themoviedb.org/3/discover/tv?api_key=${APIkey}&language=en-US&with_genres=10759`,
